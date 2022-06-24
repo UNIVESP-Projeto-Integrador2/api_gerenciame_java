@@ -18,11 +18,11 @@ Pré requisitos:
 6. Pronto! Agora é só chamar os endpoints via Postman ou Insomnia.
 
 # PARA COMPILAR O PROJETO
-<b>File -> Project Structure -> Project Settings -> Artifacts -> Clique no "+" -> Jar -> From modules with dependencies... > selecione qual é a classe Main  > OK
+<b><br>File -> Project Structure -> Project Settings -> Artifacts -> Clique no "+" -> Jar -> From modules with dependencies... > selecione qual é a classe Main  > OK<br>
 ![image](https://user-images.githubusercontent.com/56417970/175747014-06c168de-1a0b-40b8-b280-8ea76bc918d3.png)
 ![image](https://user-images.githubusercontent.com/56417970/175747540-1273302b-7d00-4b94-8db6-85d900ae983c.png)
 ![image](https://user-images.githubusercontent.com/56417970/175748001-cf1cdc01-9ccc-45f6-97bd-76123a2f4cdf.png)
-<b> O projeto poderá ser encontrado em api_gerenciame_java\api\out\artifacts, dentro da pasta criada mais recentemente: <b> 
+<br> O projeto poderá ser encontrado em api_gerenciame_java\api\out\artifacts, dentro da pasta criada mais recentemente: <br>
 ![image](https://user-images.githubusercontent.com/56417970/175748595-14057732-f648-49ea-82f7-a29b845301ba.png)
-<b>Este é o projeto compilado:<b>
+<br>Este é o projeto compilado:<br>
 ![image](https://user-images.githubusercontent.com/56417970/175748615-b74a9d91-3670-4728-83c0-b1b090aa314f.png)
