@@ -7,12 +7,12 @@ Pré requisitos:
 
 2. Baixar e instalar o Maven 3.8.6 Source zip archive: https://maven.apache.org/download.cgi
 3. Baixar e instalar o IntellliJ: https://www.jetbrains.com/idea/download/#section=windows
-4. Ao abrir o IntelliJ, clique em &quot;Open&quot; e escolha o caminho onde o projeto se encontra. Clique em &quot;OK&quot;:
+4. Ao abrir o IntelliJ, clique em “Open” e escolha o caminho onde o projeto se encontra. Clique em “OK”:
 
-![](RackMultipart20220624-1-qlig02_html_65a282f7ad2fbcc4.png)
+![image](https://user-images.githubusercontent.com/56417970/175539044-cef6b2a1-a401-4afc-81c4-18c5a42d7f76.png)
 
-5. Para rodar o projeto no IntelliJ, abra o arquivo src \&gt; main \&gt; java \&gt; com.gerenciame.api \&gt; gerenciameApplication, clique no botão direito e selecione &quot;Run gerenciameApplication&quot;:
+5. Para rodar o projeto no IntelliJ, abra o arquivo src > main > java > com.gerenciame.api > gerenciameApplication, clique no botão direito e selecione “Run gerenciameApplication”:
 
-![](RackMultipart20220624-1-qlig02_html_17581f13791d578c.png)
+![image](https://user-images.githubusercontent.com/56417970/175538983-fe91fa38-51a7-4a3a-9877-2fb9f1b2eaa4.png)
 
 6. Pronto! Agora é só chamar os endpoints via Postman ou Insomnia.
