@@ -17,7 +17,6 @@ public class Subtarefa {
     private Long id_subtarefa;
 
     @ManyToOne
-    @Column(nullable = false)
     private Tarefa tarefa;
 
     @Size(max = 200)
