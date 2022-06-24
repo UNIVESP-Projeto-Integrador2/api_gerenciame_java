@@ -24,7 +24,7 @@ Pré requisitos:
 
 7. Pronto! Agora é só chamar os endpoints via Postman ou Insomnia.
 
-# PARA COMPILAR O PROJETO
+# PARA COMPILAR O PROJETO (necessário para publicação na AWS)
 ## File -> Project Structure -> Project Settings -> Artifacts -> Clique no "+" -> Jar -> From modules with dependencies... > selecione qual é a classe Main  > OK <br>
 ![image](https://user-images.githubusercontent.com/56417970/175747014-06c168de-1a0b-40b8-b280-8ea76bc918d3.png)
 ![image](https://user-images.githubusercontent.com/56417970/175747540-1273302b-7d00-4b94-8db6-85d900ae983c.png)
