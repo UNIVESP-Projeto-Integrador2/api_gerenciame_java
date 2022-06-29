@@ -2,24 +2,24 @@ package com.gerenciame.api.controller.request;
 
 import com.gerenciame.api.model.StatusTarefa;
 
-import javax.validation.constraints.Future;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.sql.Time;
 import java.time.LocalDate;
 
 public class TarefaPutRequest {
 
-    @Size(max = 50)
+    @Size(max = 50) @NotNull @NotBlank
     private String nome_tarefa;
 
+    @NotNull @NotBlank
     private LocalDate data_inicial;
 
-    @Future
+    @Future @NotNull @NotBlank
     private LocalDate data_limite;
 
     private Time hora;
 
+    @NotNull @NotBlank
     private StatusTarefa status;
 
     @Size(max = 100)

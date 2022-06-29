@@ -8,6 +8,7 @@ import com.gerenciame.api.repository.SubtarefaRepository;
 import com.gerenciame.api.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -23,11 +24,11 @@ public class SubtarefaController {
     TarefaRepository tarefaRepository;
 
     @PostMapping
-    public ResponseEntity<?> postSubtarefa(@RequestBody SubtarefaRequest request){
+    public ResponseEntity<?> postSubtarefa(@Validated @RequestBody SubtarefaRequest request){
         //valida se tarefa existe
         Optional<Tarefa> tarefaOptional = tarefaRepository.findById(request.getId_tarefa());
         if(!tarefaOptional.isPresent()){
-            return ResponseEntity.unprocessableEntity().body("ID tarefa não existe");
+            return ResponseEntity.notFound().build();
         }
         Tarefa tarefa = tarefaOptional.get();
 
@@ -41,7 +42,7 @@ public class SubtarefaController {
 
     @Transactional
     @PutMapping("/{id_subtarefa}")
-    public ResponseEntity<?> putSubtarefa(@PathVariable Long id_subtarefa, @RequestBody SubtarefaPutRequest request) {
+    public ResponseEntity<?> putSubtarefa(@Validated @PathVariable Long id_subtarefa, @RequestBody SubtarefaPutRequest request) {
         Optional<Subtarefa> subtarefaOptional = repository.findById(id_subtarefa);
         if (!subtarefaOptional.isPresent()) {
             return ResponseEntity.notFound().build();
@@ -54,7 +55,7 @@ public class SubtarefaController {
     }
 
     @DeleteMapping("/{id_subtarefa}")
-    public ResponseEntity<?> deleteTarefa(@PathVariable Long id_subtarefa){
+    public ResponseEntity<?> deleteTarefa(@Validated @PathVariable Long id_subtarefa){
 
         Optional<Subtarefa> subtarefaOptional = repository.findById(id_subtarefa);
 

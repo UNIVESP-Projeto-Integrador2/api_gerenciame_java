@@ -4,6 +4,7 @@ import com.gerenciame.api.model.Tarefa;
 
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.sql.Time;
 import java.time.LocalDate;
@@ -13,14 +14,13 @@ public class TarefaRequest {
     @Size(max = 50)
     private String nome_tarefa;
 
-    @NotBlank
+    @NotNull
     private LocalDate data_inicial;
 
-    @NotBlank
+    @NotNull
     @Future
     private LocalDate data_limite;
 
-    @NotBlank
     private Time hora;
 
     @Size(max = 100)
