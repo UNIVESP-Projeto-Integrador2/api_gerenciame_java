@@ -8,6 +8,7 @@ import com.gerenciame.api.repository.SubtarefaRepository;
 import com.gerenciame.api.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -32,17 +33,18 @@ public class TarefaController {
     }
 
     @PostMapping
-    public ResponseEntity<?> postTarefa(@RequestBody TarefaRequest request){
+    public ResponseEntity<TarefaResponse> postTarefa(@Validated @RequestBody TarefaRequest request){
         Tarefa tarefa = TarefaRequest.toModel(request);
 
         repository.save(tarefa);
 
-        return ResponseEntity.status(201).build();
+        TarefaResponse tarefaResponse = Tarefa.toResponse(tarefa);
+        return ResponseEntity.status(201).body(tarefaResponse);
     }
 
     @Transactional
     @PutMapping("/{id_tarefa}")
-    public ResponseEntity<?> putTarefa(@PathVariable Long id_tarefa, @RequestBody TarefaPutRequest request){
+    public ResponseEntity<?> putTarefa(@Validated @PathVariable Long id_tarefa, @RequestBody TarefaPutRequest request){
         Optional<Tarefa> tarefaOptional= repository.findById(id_tarefa);
         if(!tarefaOptional.isPresent()){
             return ResponseEntity.notFound().build();
@@ -77,7 +79,7 @@ public class TarefaController {
 
     @Transactional
     @DeleteMapping("/{id_tarefa}")
-    public ResponseEntity<?> deleteTarefa(@PathVariable Long id_tarefa){
+    public ResponseEntity<?> deleteTarefa(@Validated @PathVariable Long id_tarefa){
 
         Optional<Tarefa> tarefaOptional = repository.findById(id_tarefa);
 

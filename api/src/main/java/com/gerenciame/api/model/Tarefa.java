@@ -28,7 +28,6 @@ public class Tarefa {
     @Column(nullable = false)
     private LocalDate data_limite;
 
-    @Column(nullable = false)
     private Time hora;
 
     @Column(nullable = false)

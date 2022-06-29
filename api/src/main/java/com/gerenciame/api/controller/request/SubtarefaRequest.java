@@ -3,6 +3,7 @@ package com.gerenciame.api.controller.request;
 import com.gerenciame.api.model.Subtarefa;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.File;
 import java.util.Set;
@@ -10,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class SubtarefaRequest {
 
-    @NotBlank
+    @NotNull
     private Long id_tarefa;
 
     @NotBlank
