@@ -36,19 +36,18 @@ public class TarefasGet {
     }
     @E("o retorno sera ok do endpoint TarefasGet")
     public void oRetornoSeraOkDoEndpointTarefasGet() {
-        response.body("tarefas.id_tarefa[0]", is(1));
-        response.body("tarefas.nome_tarefa[0]", containsString("MUDOU"));
-        response.body("tarefas.data_inicial[0]", equalTo("2022-09-05"));
-        response.body("tarefas.data_limite[0]", equalTo("2022-12-09"));
-        response.body("tarefas.hora[0]", equalTo("12:00:00"));
-        response.body("tarefas.status[0]", equalTo("FEITO"));
-        response.body("tarefas.descricao[0]", equalTo("TESTE1"));
+        response.body("id_tarefa[0]", is(1));
+        response.body("nome_tarefa[0]", containsString("tarefa 1"));
+        response.body("data_inicial[0]", equalTo("2022-06-30"));
+        response.body("data_limite[0]", equalTo("2022-07-29"));
+        response.body("hora[0]", equalTo("10:30:00"));
+        response.body("status[0]", equalTo("A_FAZER"));
+        response.body("descricao[0]", equalTo("testando o post 1"));
         response.body("subtarefas[0]", is(notNullValue()));
-        response.body("tarefas.subtarefas.id_subtarefa[0]", is(4));
-        response.body("tarefas.subtarefas.id_tarefa[0]", is(1));
-        response.body("tarefas.subtarefas.nome_subtarefa[0]", equalTo("teste"));
-        response.body("tarefas.subtarefas.anexo_subtarefa[0]", containsString("teste"));
-        response.body("tarefas.subtarefas.status_subtarefa[0]", equalTo("A_FAZER"));
+        response.body("subtarefas[0].id_subtarefa[0]", is(notNullValue()));
+        response.body("subtarefas[0].id_tarefa[0]", is(1));
+        response.body("subtarefas[0].nome_subtarefa[0]", containsString("nome teste"));
+        response.body("subtarefas[0].status_subtarefa[0]", equalTo("A_FAZER"));
 
     }
 
