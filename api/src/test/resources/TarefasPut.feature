@@ -15,7 +15,5 @@ Funcionalidade:
       |    2       | tipoDif |   400  |badRequest|
       |    2       | limites |   400  |badRequest|
       |    2       |   obg   |   200  |    ok    |
-      |    2       |  vazio  |   400  |badRequest|
-      |    2       |  nulo   |   400  |badRequest|
       |  12345654  |  valido |   404  | notFound |
 

@@ -12,7 +12,7 @@ public class MassaDeDadosSubtarefas {
             "  \"id_tarefa\": 1,\n" +
             "  \"nome_subtarefa\": \"nome alterado subtarefa\",\n" +
             "  \"anexo_subtarefa\": \"teste2\",\n" +
-            "  \"status_subtarefa\": \"FAZENDO\"\n" +
+            "  \"status_subtarefa\": \"FEITO\"\n" +
             "}";
     public static final String bodyTipagemDiferente = "{\n" +
             "  \"id_tarefa\": \"teste\",\n" +
@@ -29,7 +29,7 @@ public class MassaDeDadosSubtarefas {
     public static final String bodyObrigatoriedade = "{\n" +
             "    \"id_tarefa\": \"1\",\n" +
             "    \"nome_subtarefa\": \"nome teste\",\n" +
-            "    \"status_subtarefa\": \"FAZENDO\"\n" +
+            "    \"status_subtarefa\": \"FEITO\"\n" +
             "}";
     public static final String bodyVazio = "{}";
     public static final String bodyNulo = "{\n" +
