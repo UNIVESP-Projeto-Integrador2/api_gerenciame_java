@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="api_gerenciame_java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/api_gerenciame_java_jar</output-path>
+    <root id="archive" name="api_gerenciame_java.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/executavel_publicacao/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
